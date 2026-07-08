@@ -36,7 +36,7 @@
 
 <br>
 
-<img width="927" height="519" alt="ev-pulse 아키텍처" src="https://github.com/user-attachments/assets/23b671ba-81d8-40d8-b7ee-8ac0f5bfc8c7" />
+
 
 ### 2. Azure 기반 실시간 EV 배터리 이상 탐지 시스템 (`2026.06 ~ 2026.06`)
 * **Description:** 대용량 차량 시뮬레이터 센서 데이터를 클라우드 환경에서 실시간으로 인제스션하고, 이상 탐지 결과를 최종 서비스 화면까지 끊김 없이 전달하는 End-to-End 파이프라인 프로젝트입니다.
