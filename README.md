@@ -14,7 +14,7 @@
 
 ## 🛠️ 보유 역량 요약 (Core Competencies)
 
-* **Cloud & Platform:** `Azure Ecosystem` `GCP (Google Cloud Platform)`
+* **Cloud & Platform:** `Azure Ecosystem`
 * **Data Pipeline:** `Azure Event Hubs` `Stream Analytics` `Azure Data Factory`
 * **Serverless & AI:** `Azure Functions` `Azure Databricks` `Azure OpenAI`
 * **Data Quality & Dev:** `Python` `Pandas` `SQL` `Embedded Robot Control`
@@ -118,10 +118,10 @@
 | 국립한밭대학교 제 14회 정보기술대학 작품전시회 | 국립한밭대학교 정보기술대학 | 2025.12 | 장려상 |
 | 2025 미래내일 청년 일경험 지원사업 | 국립한밭대학교 HRD 센터장 | 2025.10 | 장려상 |
 | 국립한밭대학교 창의적 종합설계 경진대회 | 국립한밭대학교 공학교육혁신센터 | 2025.10 | 장려상 |
-| 지역대학 연계 지역의제 발표대회 | 대전과학산업진흥원 | 2025.09.05 | 장려상 |
+| 지역대학 연계 지역의제 발표대회 | 대전과학산업진흥원 | 2025.09 | 장려상 |
 | SP!ED Global Capstone Design<br>(SP!ED 2025 Bronze Award) | iRE-Asia(아시아 혁신 연구·교육 컨소시엄) | 2025.08.23 | 동상 |
 | 유성구 지역문제해결 경진대회 | 국립한밭대학교 LINK 3.0 사업단 | 2024.11 | 우수상 |
-| KT 기업 연계 오픈 데이터 활용 스타트업 챌린지 | KT / 대전·세종·충남(DSC) 지역혁신플랫폼 | 2024.11.22 | 우수상 |
+| KT 기업 연계 오픈 데이터 활용 스타트업 챌린지 | KT / 대전·세종·충남(DSC) 지역혁신플랫폼 | 2024.11 | 우수상 |
 | 제 1회 2024 대한민국 학생 창업 주간(KBO-NINE) | 한국연구재단 | 2024.08 | 최우수상 |
 
 ---
