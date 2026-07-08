@@ -31,7 +31,7 @@
   * *Problem:* 대규모 가상 매매가 동시 체결될 때 정형 DB(Azure SQL DB) 저장소에 원시 데이터가 다이렉트로 유입되면서 인덱스 락 및 적재 지연(Latency) 현상이 식별되었습니다.
   * *Solution:* 원시 로그는 즉시 가벼운 스토리지 레이어로 바이패스하고, 대시보드 서빙에 필수적인 집계 데이터만 `Stream Analytics`에서 1차 마이크로 배칭 처리 후 정형 DB에 적재되도록 파이프라인을 최적화하여 병목을 해결했습니다.
 
-<img src="./images/stock-pipeline.png" width="80%" alt="Stock Pipeline Architecture"/>
+<img src="https://github.com/user-attachments/assets/e074c525-c130-44e1-bd90-1206cc874427" width="85%" alt="Stock Pipeline Architecture"/>
 
 <br>
 
