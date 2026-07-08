@@ -31,9 +31,12 @@
   * *Problem:* 대규모 가상 매매가 동시 체결될 때 정형 DB(Azure SQL DB) 저장소에 원시 데이터가 다이렉트로 유입되면서 인덱스 락 및 적재 지연(Latency) 현상이 식별되었습니다.
   * *Solution:* 원시 로그는 즉시 가벼운 스토리지 레이어로 바이패스하고, 대시보드 서빙에 필수적인 집계 데이터만 `Stream Analytics`에서 1차 마이크로 배칭 처리 후 정형 DB에 적재되도록 파이프라인을 최적화하여 병목을 해결했습니다.
 
+
 <img src="https://github.com/user-attachments/assets/e074c525-c130-44e1-bd90-1206cc874427" width="85%" alt="Stock Pipeline Architecture"/>
 
 <br>
+
+<img width="927" height="519" alt="ev-pulse 아키텍처" src="https://github.com/user-attachments/assets/23b671ba-81d8-40d8-b7ee-8ac0f5bfc8c7" />
 
 ### 2. Azure 기반 실시간 EV 배터리 이상 탐지 시스템 (`2026.06 ~ 2026.06`)
 * **Description:** 대용량 차량 시뮬레이터 센서 데이터를 클라우드 환경에서 실시간으로 인제스션하고, 이상 탐지 결과를 최종 서비스 화면까지 끊김 없이 전달하는 End-to-End 파이프라인 프로젝트입니다.
@@ -44,9 +47,11 @@
   * **실시간 필터링 및 판단 로직:** `Stream Analytics` 쿼리를 활용해 수집되는 스트리밍 데이터에서 이상 징후 임계값을 실시간으로 탐지하고 정제하는 필터링 로직을 아키텍처 단에 내재화했습니다.
   * **서빙 레이어 구현:** 탐지된 이상 징후 결과 데이터를 `Azure SQL DB`에 실시간 적재함과 동시에, 서버리스 인프라인 `Azure Functions` 트리거 및 REST API를 통해 모니터링 웹 대시보드 화면에 지연 없이 실시간 표출되는 전 과정을 검증했습니다.
 
-<img src="./images/ev-pipeline.png" width="80%" alt="EV Battery Pipeline Architecture"/>
+
+<img src="https://github.com/user-attachments/assets/23b671ba-81d8-40d8-b7ee-8ac0f5bfc8c7" width="85%" alt="EV Battery Pipeline Architecture"/>
 
 <br>
+
 
 ### 3. ETRI 제지공정 전력 최적화 및 스팀량 예측 분석 (`2024.02 ~ 2024.09`)
 * **Description:** 한국전자통신연구원(ETRI) 과제로서 산업 실증 데이터를 기반으로 초지 공정의 전건조 및 후건조 단계 에너지 효율을 분석하고 최적화 모니터링 방안을 도출한 연구 프로젝트입니다.
