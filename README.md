@@ -1,160 +1,32 @@
 # ☁️ Cloud Data Engineer | 안다은 (Daeun Ahn)
 
-<div align="left">
-  <p><b>"문제 흐름을 구조적으로 분석하고, 팀과 함께 완성도 있는 소프트웨어를 만들어가는 개발자입니다."</b></p>
-  <p>클라우드 인프라와 데이터 엔지니어링 역량을 바탕으로 비즈니스 가치를 창출하는 파이프라인을 설계합니다.</p>
+"문제 흐름을 구조적으로 분석하고, 팀과 함께 완성도 있는 소프트웨어를 만들어가는 개발자입니다."
 
-  <p>
-    <a href="mailto:cyma54@naver.com"><img src="https://img.shields.io/badge/Email-cyma54@naver.com-blue?style=flat-square&logo=Gmail&logoColor=white"/></a>
-    <a href="https://www.notion.so/dandan-is-dandan/29f40052297f8181872ff6d6a8ae2fbd?source=copy_link" target="_blank"><img src="https://img.shields.io/badge/Notion-Portfolio-black?style=flat-square&logo=Notion&logoColor=white"/></a>
-  </p>
+<div align="left">
+  <a href="mailto:cyma54@naver.com"><img src="https://img.shields.io/badge/Email-cyma54@naver.com-blue?style=flat-square&logo=Gmail&logoColor=white"/></a>
+  <a href="https://www.notion.so/dandan-is-dandan/29f40052297f8181872ff6d6a8ae2fbd?source=copy_link" target="_blank"><img src="https://img.shields.io/badge/Notion-Portfolio-black?style=flat-square&logo=Notion&logoColor=white"/></a>
 </div>
 
 ---
 
-## 🛠️ 보유 역량 요약 (Core Competencies)
+## 🛠️ Tech Stacks
 
-* **Cloud & Platform:** `Azure Ecosystem`
-* **Data Pipeline:** `Azure Event Hubs` `Stream Analytics` `Azure Data Factory`
-* **Serverless & AI:** `Azure Functions` `Azure Databricks` `Azure OpenAI`
-* **Data Quality & Dev:** `Python` `Pandas` `SQL` `Embedded Robot Control`
+* **Cloud & Platform:** `Azure Ecosystem`, `GCP (Google Cloud Platform)`
+* **Data Pipeline:** `Azure Event Hubs`, `Stream Analytics`, `Azure Data Factory`[cite: 2, 3]
+* **Serverless & AI:** `Azure Functions`, `Azure Databricks`, `Azure OpenAI`[cite: 2, 3]
+* **Languages & DB:** `Python`, `Pandas`, `SQL`, `Embedded Robot Control`
 
 ---
 
 ## 🚀 Key Projects
 
-### 1. Azure 기반 가상 멀티 에이전트 주식 시장 시뮬레이션 및 데이터 파이프라인 (`2026.06 ~ 2026.07`)
-> 사용자의 주문이 시장 가격 체결 구조 및 에이전트 행동에 미치는 영향을 관찰할 수 있는 가상 주식 시뮬레이션 환경 구축 및 실시간 트랜잭션 분석 파이프라인 프로젝트입니다.
+### 1. Azure 기반 가상 멀티 에이전트 주식 시장 시뮬레이션 (`2026.06 ~ 2026.07`)[cite: 3]
+* **Description:** 사용자 주문에 반응하는 멀티 에이전트 가상 주식 시장 시뮬레이션 환경 구축[cite: 3]
+* **Tech Stack:** `Event Hubs`, `Stream Analytics`, `Databricks`, `Azure SQL DB`, `Azure OpenAI`[cite: 2, 3]
+* **Core Tasks:** 
+  * 트랜잭션 특성에 맞춰 스트리밍(Event Hubs) 및 배치(Databricks) 인프라 계층 분리 설계[cite: 3]
+  * 동시다발적 체결 이벤트 분산을 위한 스토리지 이원화 및 대시보드 쿼리 인덱싱 최적화[cite: 2, 3]
 
-* **Role:** **팀장 및 데이터 엔지니어 / 아키텍처 설계 총괄**
-* **Tech Stack:** `Azure Event Hubs`, `Stream Analytics`, `Azure Databricks`, `Azure SQL DB`, `Azure OpenAI`, `Python`
-* **주요 수행 내용:**
-  * **아키텍처 인프라 최적화:** 트랜잭션 특성에 맞춰 실시간 데이터 처리 레이어와 장기 배치 분석 레이어를 분리 배치하는 클라우드 인프라 아키텍처 설계
-  * **스트리밍 파이프라인 구축:** 체결 엔진 트랜잭션 데이터를 `Event Hubs`로 인제스션 후 `Stream Analytics`를 연동하여 실시간 가공 파이프라인 구현
-  * **거래 패턴 적재:** `Databricks`를 통해 사용자별 거래 패턴 데이터를 전처리하여 어드민 대시보드 조회가 가능한 `Azure SQL DB` 인터페이스 연동
-  * **AI 심리 지표 연동:** `Azure OpenAI` 기반 뉴스·금리 등 외부 변수에 따른 에이전트의 투자 판단 심리 데이터를 파이프라인 흐름 내 테이블 스키마에 동적 구현
-* **기술적 트러블 슈팅 (Troubleshooting):**
-  * *Problem:* 동시다발적 체결 이벤트 발생 시 정형 DB 저장소 과부하 및 데이터 적재 레이텐시 증가 위험성 식별
-  * *Solution:* 실시간 통계와 장기 패턴 분석용 스토리지 인프라를 논리적으로 분리하고, 대시보드 조회용 쿼리 최적화 및 인덱싱 구조 설계를 통해 데이터 지연을 완화함
-
-<br>
-
-### 2. Azure 기반 실시간 EV 배터리 이상 탐지 모니터링 시스템 (`2026.06 ~ 2026.06`)
-> EV 배터리 센서 데이터를 실시간으로 수집·처리하고, 이상 탐지 결과를 SQL 저장소와 웹 대시보드로 연결한 클라우드 데이터 파이프라인 프로젝트입니다.
-
-* **Role:** **팀장 및 데이터 엔지니어** (전체 아키텍처 구조 설계, 데이터 흐름 구현)
-* **Tech Stack:** `Microsoft Azure`, `Azure IoT Hub`, `Stream Analytics`, `Azure SQL DB`, `Azure Functions`, `Python`
-* **주요 수행 내용:**
-  * **인프라 부하 분산 구조 설계:** 대규모 실시간 대용량 차량 센서 스트리밍 데이터 적재 시 발생하는 인프라 병목을 방지하기 위한 이원화 파이프라인 구성
-  * **수집 및 전처리 파이프라인:** Python 시뮬레이터 센서 데이터를 `IoT Hub`로 안정적 인제스션 후 `Stream Analytics` 기반 실시간 이상 필터링 및 처리 로직 구현
-  * **엔드투엔드 서빙 검증:** 가공 데이터를 `Azure SQL DB`에 최적화 적재 프로세스로 설계하고, `Azure Functions API` 연동으로 웹 대시보드 화면 표출까지 데이터가 유실 없이 도달하는 흐름 구현
-
-<br>
-
-### 3. ETRI 제지공정 전력 최적화 및 스팀량 예측 분석 연구 (`2024.02 ~ 2024.09`)
-> 제지공정 설비에서 수집된 시계열 데이터를 활용해 전건조·후건조 단계의 스팀 사용량을 분석하고, 에너지 소비 효율 개선을 위한 데이터 기반 모니터링 방안을 수립한 연구 프로젝트입니다.
-
-* **Role:** **연구 보조원** (산업 공정 데이터 전처리, 시계열 분석 및 예측 모델링 구현)
-* **Tech Stack:** `Python`, `Pandas`, `LSTM`, `Data Visualization`
-* **주요 수행 내용:**
-  * **시계열 데이터 전처리:** 실증 산업 공정 설비의 결측치와 이상치를 정제하고 지종 및 평량별 공정 특성 반영 변수 가공
-  * **특성 변수 분석:** 상관관계 분석 및 히트맵 시각화를 수행하여 스팀 사용량과 인과관계가 높은 주요 태그(Tag) 변수 추출
-  * **예측 및 모델 성능 분석:** 입력 변수 구성에 따른 LSTM 기반 스팀량 예측 모델을 설계하고, 모델 변수 선택이 예측 성능에 미치는 도메인 영향도 비교 분석
-  * **에너지 손실 관계 검토:** 예측된 스팀 데이터와 건조 공정 후 응축 열인 회수열 데이터를 연동 분석하여 과도 스팀 사용을 판단하는 최적화 지표 검토
-
-<br>
-
-### 4. 딥러닝 기반 딸기 숙성도 분류 및 로봇 팔 수확 자동화 시스템 (`2025.01 ~ 2025.10`)
-> 비전 기술로 딸기의 성숙도와 위치를 딥러닝으로 인식하여, 임베디드 로봇팔로 타겟팅 자동 수확을 제어하는 인공지능 기반 통합 제어 시스템입니다.
-
-* **Role:** **임베디드 제어 코드 개발 및 비전-제어 좌표계 연동 흐름 구현** (캡스톤 졸업 프로젝트)
-* **Tech Stack:** `Python`, `Nvidia Jetson Nano`, `Embedded Robot Control`, `Deep Learning Object Detection`
-* **주요 수행 내용:**
-  * **하드웨어 통신망 구축:** 에지 디바이스(`Jetson`) 환경과 물리 로봇팔 하드웨어 장치 간 소켓/시리얼 통신 프로토콜을 정립하여 안정적인 제어 명령 파이프라인 구축
-  * **3차원 좌표계 변환 구현:** 비전 센서가 인식한 2D 이미지 상의 위치 정보를 로봇팔이 물리 공간에서 타겟팅 동작을 할 수 있도록 실제 3차원 공간 좌표계 변환 알고리즘 적용
-  * **통합 안정성 검증:** 딥러닝 객체 인식 결과에 따른 분기 처리 제어 로직을 구현하고, 반복적인 구동 테스트 시나리오를 설계하여 임베디드 통신 및 실제 동작 신뢰성 검증
-
-<br>
-
-### 5. OCR 기반 FRS 이미지 자동 판독 및 프로파일 산출 시스템 (`2025.07 ~ 2025.09`)
-> 원자력 발전소 내진검증용 비정형 FRS 이미지 데이터를 정형 데이터로 자동 변환하여 판독 비효율을 개선한 프로젝트입니다.
-
-* **Role:** **Python 데이터 전처리 코드 개발 및 전처리 로직 구현** (두우엔지니어링 일경험)
-* **Tech Stack:** `Python`, `Pandas`, `OCR`
-* **주요 수행 내용:**
-  * **데이터프레임 수집 자동화:** FRS 이미지 파일 파싱을 통해 수작업 판독 오류를 배제하고 다량의 비정형 데이터를 정형 DataFrame 구조로 통합 가공 프로세스 구축
-  * **정제 파이프라인 설계:** 파편화된 측정 단위 통일, 주파수 범위 정렬 알고리즘 반영 및 데이터셋 내 결측치·이상치 처리 기준 수립
-
----
-
-## 👩‍💻 Career (경력 및 연구 이력)
-
-* **(주)두우엔지니어링** | 인턴 / 데이터 전처리 개발 (`2025.07 ~ 2025.09`)
-  * 원자력 발전소 내진검증 인프라 지원을 위한 OCR 기반 FRS 이미지 자동 판독 및 보수적 프로파일 산출 프로그램 개발 (`Python`, `Pandas` 활용)
-* **Eco AI Lab (빅데이터 분석 연구실)** | 랩장 (Lab Leader) (`2023.10 ~ 2024.12`)
-  * **ETRI 공동 과제:** 초지 공정 시계열 데이터 결측치 처리 및 LSTM 기반 스팀 예측 모델 분석
-  * **실내 공기질 연구:** 멀티 센서 데이터 품질 기준 수립, K-means/DBSCAN 패턴 군집화 연구 주도 및 학회 구두/포스터 발표 참여
-* **DfX Lab (임베디드 연구실)** | 연구 학부생 (`2025.01 ~ 2025.10`)
-  * 임베디드 로봇팔 기반 딸기 수확 자동화 시스템 구현 프로세스 참여 및 Jetson 환경 기반 좌표계 연동 통신 제어동작 검증 실습
-
----
-
-## 📝 Publications (연구 논문 & 학술 발표)
-
-* **“딥러닝 전처리 모델 및 클러스터링 분석을 활용한 주거용 건물 실시간 공기질 모니터링 플랫폼”** | 한국통신학회 (KICS), 2024
-  * ResNet-GRU 기반 딥러닝 앙상블 모델을 이용한 시계열 결측 데이터 보완 알고리즘 파이프라인 개발
-* **“최적 스팀량 예측 인공지능 모델을 통한 공정의 에너지 효율 개선 모니터링 시스템”** | 대한전자공학회 (IEEK), 2024
-  * 제지공정 변수(Tag)와 스팀량 간의 상관관계 분석 및 히트맵 시각화를 통한 특성 변수 선택 기준 정립
-* **“멀티 센서 기반의 스마트홈 공기질 향상을 위한 모니터링 시스템”** | 한국통신학회 (KICS), 2024
-  * 룰 기반 종합 지표 설계 및 비지도 학습 알고리즘을 통한 실내 활동 변화 요인 군집화 분석
-
----
-
-## 🏆 Awards (수상 경력)
-
-| 항목 | 기관 | 일자 | 내용 |
-| :--- | :--- | :--- | :--- |
-| 국립한밭대학교 학습법 연합 성과발표회 | 국립한밭대학교 교수학습센터 | 2025.12 | 우수성과상 |
-| 국립한밭대학교 제 14회 정보기술대학 작품전시회 | 국립한밭대학교 정보기술대학 | 2025.12 | 장려상 |
-| 2025 미래내일 청년 일경험 지원사업 | 국립한밭대학교 HRD 센터장 | 2025.10 | 장려상 |
-| 국립한밭대학교 창의적 종합설계 경진대회 | 국립한밭대학교 공학교육혁신센터 | 2025.10 | 장려상 |
-| 지역대학 연계 지역의제 발표대회 | 대전과학산업진흥원 | 2025.09 | 장려상 |
-| SP!ED Global Capstone Design<br>(SP!ED 2025 Bronze Award) | iRE-Asia(아시아 혁신 연구·교육 컨소시엄) | 2025.08.23 | 동상 |
-| 유성구 지역문제해결 경진대회 | 국립한밭대학교 LINK 3.0 사업단 | 2024.11 | 우수상 |
-| KT 기업 연계 오픈 데이터 활용 스타트업 챌린지 | KT / 대전·세종·충남(DSC) 지역혁신플랫폼 | 2024.11 | 우수상 |
-| 제 1회 2024 대한민국 학생 창업 주간(KBO-NINE) | 한국연구재단 | 2024.08 | 최우수상 |
-
----
-
-## 🎓 Education & Certifications
-
-### Education
-* **국립한밭대학교** | 컴퓨터공학과 학사 졸업 (`2020.03 ~ 2026.02`)
-  * *도시공학과에서 컴퓨터공학과로 전과 완료, 소프트웨어 학문 간 융합 역량 구축*
-
-### Certifications
-* **2026.06** | SQL 개발자 (SQLD) — *한국데이터산업진흥원 최종합격*
-* **2026.03** | 데이터분석준전문가 (ADsP) — *한국데이터산업진흥원 최종합격*
-* **2026.03** | 빅데이터분석기사 — *한국데이터산업진흥원 필기합격*
-* **2026.02** | 정보처리기사 — *한국산업인력공단 필기합격*
-* **2022.12** | 한국사능력검정시험 (2급) — *국사편찬위원회 최종합격*
-* **2021.02** | 드론사진영상운용(기능)사 자격증 — *대한드론진흥협회 최종합격*
-* **2020.08** | 2종보통운전면허 — *경찰청 최종합격*
-
----
-
-## 🕹️ Activities (대내외 활동)
-
-* **Microsoft Data School 4기** | Azure 클라우드 아키텍처 및 데이터 엔지니어링 집중 이수 (`2026.03 ~ 2026.09`)
-* **국립한밭대학교 자작자동차동아리** | Baja/EV 차량 제작 참여 및 전기차 주행 센서 기반 배터리 전력 최적화 분석, 데이터 수집·문서화 체계 수립 (`2023.03 ~ 2024.10`)
-* **글로벌 캡스톤 디자인** | 국립한밭대학교 & 태국 마히돌대학교 글로벌 기업가정신 공동 교육과정 (`2024.09 ~ 2024.11`)
-* **나눔지기 멘토링 프로그램** | 지역돌봄센터 초등학생 대상 영어 수업 봉사 진행 (`2024.09 ~ 2024.12`)
-* **초등학생 영어 학원(CAPPYTOWN) 강사** | 학생별 학습 성향 및 수준 맞춤 피드백 및 수업 운영 (`2022.08 ~ 2025.08`)
-* **캐나다 단기 어학연수** | Victoria University 글로벌 커뮤니케이션 과정 수강 (`2022.07 ~ 2022.08`)
-
----
-
-## 📊 GitHub Stats
-<p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=daeun-ahn&show_icons=true&theme=radial" alt="Daeun's GitHub Stats" />
-</p>
+```markdown
+<!-- 💡 아키텍처 다이어그램 이미지 첨부 영역 -->
+<img src="./images/stock-pipeline.png" width="80%" alt="Stock Pipeline Architecture"/>
