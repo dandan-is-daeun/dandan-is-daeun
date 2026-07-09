@@ -38,7 +38,7 @@
 
 
 
-### 2. Azure 기반 실시간 EV 배터리 이상 탐지 시스템 (`2026.06 ~ 2026.06`)
+### 2. Azure 기반 실시간 EV 배터리 이상 탐지 시스템 (`2026.05 ~ 2026.05`)
 * **Description:** 대용량 차량 시뮬레이터 센서 데이터를 클라우드 환경에서 실시간으로 인제스션하고, 이상 탐지 결과를 최종 서비스 화면까지 끊김 없이 전달하는 End-to-End 파이프라인 프로젝트입니다.
 * **Tech Stack:** `Azure IoT Hub`, `Azure Stream Analytics`, `Azure SQL Database`, `Azure Functions`, `Python`
 * **Role:** **팀장 및 데이터 엔지니어** (전체 파이프라인 인프라 설계, 데이터 흐름 구현)
